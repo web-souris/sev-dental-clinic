@@ -5,9 +5,10 @@ import Cookie from 'js-cookie'
 //Переменные сайта
 var setting = {
 	cookie: false,
+	header: null,
+	scroll: 0,
 	sleep: {
 		status: false,
-		
 	}
 }
 
@@ -17,6 +18,15 @@ init()
 //Запуск скриптов
 $(document).ready(() => {
 	$('.button-cookie').click(clickCookieAccept())
+	$('.header__menu').click(() => {
+		$('.menu').slideToggle()
+	})
+	
+})
+//Скролл
+$(document).scroll(() => {
+	scrollHeader()
+	setting.scroll = $(document).scrollTop()
 })
 
 //Инициализация
@@ -24,6 +34,25 @@ function init() {
 	if(cookieAccept()) {
 		setting.cookie = true
 		$('.cookie').hide()
+	}
+
+	cloneHeader()
+}
+
+//Клонирование шапки
+function cloneHeader() {
+	setting.header = $('header').clone()
+	setting.header.addClass('header-fixed')
+	setting.header.appendTo('body')
+}
+
+//Скрол шапки
+function scrollHeader() {
+	if(setting.scroll >= 250 && setting.scroll > $(document).scrollTop()) {
+		$('.header-fixed').slideDown()
+	}
+	else {
+		$('.header-fixed').slideUp()
 	}
 }
 
