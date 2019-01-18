@@ -1,0 +1,50 @@
+<% var data = {
+  title: "Заголовок | Проект",
+  author: "Harrix"
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+<!--Шапка начало-->
+<header class="header">
+  <div class="container wrapper wrapper_space-between wrapper_items-center wrapper_no-wrap">
+    <div class="header__logo">
+      <a href="/" class="logo__link">
+        <img src="/img/logo.png" alt="Sev-dental-clinic" class="logo__logo">
+        <img src="/img/logo-text.png" alt="Стоматологическая клиника" class="logo__text">
+      </a>
+      <div class="logo__line"></div>
+      <div class="logo__desc">
+        Больше, чем
+стоматология
+      </div>
+    </div>
+    <div class="header__right">
+      <div class="header__phone">
+        <a href="tel:+79787444575">
+          +7 (978) 744 45 75
+        </a>
+      </div>
+      <div class="header__sleep">
+        <button class="button button-sleep">
+          Версия для слабовидящих
+        </button>
+      </div>
+      <div class="header__menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
+<!--Шапка конец-->
+<!--Cookie начало-->
+<div class="cookie">
+  <div class="cookie__text">
+    На сайте используются cookie-файлы. Если вы остаетесь на сайте, значит вы согласны на использование этой технологии
+  </div>
+  <div class="cookie__button">
+    <button class="button button-cookie">Хорошо</button>
+  </div>
+</div>
+<!--Cookie конец-->
+<%= _.template(require('./../includes/footer.html'))(data) %>

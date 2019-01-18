@@ -1,0 +1,82 @@
+.header
+	padding: 20px 0
+	&__logo
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__right
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-basis: 55%
+	&__phone
+		a
+			font-weight: 700
+			+em(24)
+			text-decoration: none
+			transition: all .25s
+			color: #191919
+			&:hover
+				color: $blue
+	&__sleep
+		margin: 0 5%
+	&__menu
+		cursor: pointer
+		&:hover
+			span 
+				background-color: $blue
+		&.active
+			span 
+				background-color: $blue
+		span
+			display: block
+			background-color: #191919
+			width: 34px
+			height: 3px
+			border-radius: 5px
+			transition: all .25s
+			margin-bottom: 7px
+			&:last-child
+				margin-bottom: 0
+
+
+.logo
+	&__link
+		display: flex
+		justify-content: space-between
+		align-items: center
+		text-decoration: none
+	&__text
+		padding-left: 13px
+	&__line
+		background-color: #000000
+		opacity: 0.25
+		width: 1px
+		height: 31px
+		margin: 0 20px
+	&__desc
+		font-weight: 300
+		color: #3b3b3b
+		width: 102px
+		line-height: 18px
+
+@media screen and (max-width: 1050px)
+	.logo
+		&__line, &__desc
+			display: none
+	.header__right
+		flex-basis: 100%
+		margin-left: 5%
+		justify-content: flex-end
+@media screen and (max-width: 992px)
+	.header__phone
+		display: none
+@media screen and (max-width: 768px)
+	.logo__text
+		display: none
+
+@media screen and (max-width: 400px)
+	.header__right
+		flex-basis: 100%
+		justify-content: space-between
+		margin-left: 0
