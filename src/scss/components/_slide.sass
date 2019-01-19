@@ -1,0 +1,124 @@
+.slide
+	display: flex
+	justify-content: space-between
+	&__image
+		flex-basis: 49%
+		img
+			max-width: 500px
+			width: 100%
+			vertical-align: top
+	&__content
+		flex-basis: 50%
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+	&__title
+		+em(62)
+		color: #191919
+		font-weight: bold
+		line-height: 65px
+		margin: 0
+		padding: 0
+		padding-top: 15%
+	&__text
+		+em(18)
+		color: #3b3b3b
+		line-height: 32px
+	&__button
+		flex-basis: 50%
+		button
+			background-color: $accent
+			color: #fff
+			+em(24)
+			border-radius: 35px
+			height: 70px
+			line-height: 70px
+			max-width: 290px
+			width: 100%
+			transition: all .25s
+			&:hover
+				background-color: darken($accent, 10%)
+	&__info
+		padding-bottom: 15%
+		padding-top: 5%
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__active-slide
+		+em(48)
+		color: #191919
+		vertical-align: top
+		line-height: 1
+	&__slider-length
+		color: #3b3b3b
+		+em(18)
+	&__buttons
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__navigation
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		flex-basis: 45%
+	&__buttons
+		margin-left: 5%
+	&__nav
+		width: 70px
+		height: 70px
+		border: 1px solid #3b3b3b
+		border-radius: 10em
+		cursor: pointer
+		margin: 0 5px
+		transition: all .25s
+		background-color: #fff
+		display: flex
+		justify-content: center
+		align-items: center
+		i 
+			font-size: 40px
+			line-height: 1
+			color: #191919
+			transition: all .25s
+		&:hover
+			background-color: darken(#fff, 10%)
+
+@media screen and (max-width: 992px)
+	.slide
+		align-items: center
+		&__image
+			flex-basis: 40%
+		&__title
+			padding-top: 0
+		&__info
+			padding-bottom: 0
+		&__content
+			flex-basis: 58%
+@media screen and (max-width: 800px)
+	.slide
+		&__image
+			flex-basis: 35%
+		&__content
+			flex-basis: 64%
+@media screen and (max-width: 768px)
+	.slide
+		flex-wrap: wrap
+		&__image
+			flex-basis: 100%
+			margin-bottom: 3%
+			img
+				margin: 0 auto
+		&__content
+			flex-basis: 100%
+		&__title
+			+em(40)
+			line-height: 1.2
+		&__info
+			flex-wrap: wrap
+		&__button
+			flex-basis: 100%
+			text-align: center
+		&__navigation
+			margin-top: 5%
+			flex-basis: 100%
+			justify-content: center

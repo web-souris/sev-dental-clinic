@@ -1,6 +1,6 @@
 import $ from "jquery"
 import Cookie from 'js-cookie'
-
+import carousel from './carousel'
 
 //Переменные сайта
 var setting = {
@@ -15,6 +15,8 @@ var setting = {
 //Инициализация сервера
 init()
 
+
+
 //Запуск скриптов
 $(document).ready(() => {
 	$('.button-cookie').click(clickCookieAccept())
@@ -27,6 +29,7 @@ $(document).ready(() => {
 $(document).scroll(() => {
 	scrollHeader()
 	setting.scroll = $(document).scrollTop()
+	activeSection()
 })
 
 //Инициализация
@@ -54,6 +57,29 @@ function scrollHeader() {
 	else {
 		$('.header-fixed').slideUp()
 	}
+}
+
+//Клик на пункт меню
+$('.menu__nav a').click(function(e) {
+	e.preventDefault()
+	$('.menu').slideUp()
+	var link = $(this).attr('href')
+	var item = $(link).offset().top
+	$('body, html').animate({
+		scrollTop: item
+	}, 500)
+	return false;
+})
+
+//Активная секция
+function activeSection() {
+	$('.section').each(function(i) {
+		if($(this).position().top <= setting.scroll) {
+			var id = '"#' + $(this).attr('id') + '"'
+			$('.menu a.active').removeClass('active')
+			$('.menu a[href=' +id+ ']').addClass('active')
+		}
+	})
 }
 
 //поиск разрешение куков

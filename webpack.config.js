@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const webpack = require('webpack');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -93,6 +94,11 @@ const config = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "./css/style.bundle.css"
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     }),
     new CopyWebpackPlugin([
       {

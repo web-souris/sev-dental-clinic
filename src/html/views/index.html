@@ -36,7 +36,7 @@ _.template(require('./../includes/header.html'))(data) %>
 		<div class="container wrapper wrapper_space-between wrapper_no-wrap">
 			<div class="menu__nav">
 				<ul>
-					<li><a href="#uslugi" class="active">Наши услуги</a></li>
+					<li><a href="#uslugi">Наши услуги</a></li>
 					<li><a href="#about">О нас</a></li>
 					<li><a href="#preim">Преимущества</a></li>
 					<li><a href="#doctor">Наши врачи</a></li>
@@ -51,41 +51,102 @@ _.template(require('./../includes/header.html'))(data) %>
 				</div>
 				<div class="header__phone">
 					<a href="mailto:sevastopol_8@mail.ru">sevastopol_8@mail.ru</a>
-        </div>
-        <div class="menu__social">
-          <a href="https://vk.com/club66110341" target="_blank">
-            <i class="fa fa-vk"></i>
-          </a>
-          <a href="https://www.instagram.com/dental_clinic_sevastopol/" target="_blank">
-            <i class="fa fa-instagram"></i>
-          </a>
-        </div>
+				</div>
+				<div class="menu__social">
+					<a href="https://vk.com/club66110341" target="_blank">
+						<i class="fa fa-vk"></i>
+					</a>
+					<a
+						href="https://www.instagram.com/dental_clinic_sevastopol/"
+						target="_blank"
+					>
+						<i class="fa fa-instagram"></i>
+					</a>
+				</div>
 			</div>
 		</div>
 	</nav>
 	<!--меню конец-->
 </header>
 <!--Шапка конец-->
+<!--Слайдер начало-->
+<section class="section section_grey no-background" id="slider">
+	<div class="carousel owl-carousel">
+		<div class="container">
+			<div class="slide">
+				<div class="slide__image no-image">
+					<img src="img/5-2.jpg" alt="Безболезненное лечение зубов" />
+				</div>
+				<div class="slide__content">
+					<h1 class="slide__title">Безболезненное лечение зубов с гарантией</h1>
+					<div class="slide__text">
+						Интервально-прогрессийная континуальная форма сонорна. Гипнотический
+						рифф монотонно просветляет динамический эллипсис. Кризис жанра,
+						согласно традиционным представлениям, вызывает хамбакер.
+					</div>
+					<div class="slide__info">
+						<div class="slide__button">
+							<button
+								class="button modal-open"
+								data-theme="Запись с первого слайдера"
+							>
+								Записаться
+							</button>
+						</div>
+						<div class="slide__navigation"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="slide">
+				<div class="slide__image no-image">
+					<img src="img/555-3.jpg" alt="Безболезненное лечение зубов" />
+				</div>
+				<div class="slide__content">
+					<h1 class="slide__title">Безболезненное лечение зубов с гарантией</h1>
+					<div class="slide__text">
+						Интервально-прогрессийная континуальная форма сонорна. Гипнотический
+						рифф монотонно просветляет динамический эллипсис. Кризис жанра,
+						согласно традиционным представлениям, вызывает хамбакер.
+					</div>
+					<div class="slide__info">
+						<div class="slide__button">
+							<button
+								class="button modal-open"
+								data-theme="Запись с первого слайдера"
+							>
+								Записаться
+							</button>
+						</div>
+						<div class="slide__navigation"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--Слайдер конец-->
 <!--Услуги начало-->
-<section style="min-height: 100vh" id="uslugi"></section>
+<section style="min-height: 100vh" class="section" id="uslugi"></section>
 <!--Услуги конец-->
 <!--О нас начало-->
-<section style="min-height: 100vh" id="about"></section>
+<section style="min-height: 100vh" class="section" id="about"></section>
 <!--О нас конец-->
 <!--Преимущества начало-->
-<section style="min-height: 100vh" id="preim"></section>
+<section style="min-height: 100vh" class="section" id="preim"></section>
 <!--Преимущества конец-->
 <!--Врачи начало-->
-<section style="min-height: 100vh" id="doctor"></section>
+<section style="min-height: 100vh" class="section" id="doctor"></section>
 <!--Врачи конец-->
 <!--Документация начало-->
-<section style="min-height: 100vh" id="document"></section>
+<section style="min-height: 100vh" class="section" id="document"></section>
 <!--Документация конец-->
 <!--Отзывы начало-->
-<section style="min-height: 100vh" id="review"></section>
+<section style="min-height: 100vh" class="section" id="review"></section>
 <!--Отзывы конец-->
 <!--Контакты начало-->
-<section style="min-height: 100vh" id="contacts"></section>
+<section style="min-height: 100vh" class="section" id="contacts"></section>
 <!--Контакты конец-->
 <!--Cookie начало-->
 <div class="cookie">
