@@ -1,1 +1,31 @@
+@import "vars/_index.sass"
 .sleep
+	display: none
+	padding: 10px 0
+	&__fonts, &__img
+		font-size: 16px
+		span
+			margin: 0 5px
+			text-decoration: underline
+			cursor: pointer
+			&.active
+				color: $blue !important
+
+.is-sleep
+	&.no-image
+		img
+			display: none
+		.hide-image
+			display: none
+		.full-screen
+			flex-basis: 100%
+			width: 100%
+		.header__logo
+			img
+				display: block
+	.sleep
+		display: block
+	*
+		color: #000 !important
+	.section
+		background-color: #fff

@@ -1,5 +1,22 @@
 <% var data = { title: "Заголовок | Проект", author: "Harrix" }; %> <%=
 _.template(require('./../includes/header.html'))(data) %>
+<!--Интерфейс версии для слабовидящих-->
+<div class="sleep">
+	<div class="container wrapper wrapper_space-between wrapper_items-center">
+		<div class="sleep__fonts">
+			Размер шрифта:
+				<span style="font-size: 16px;">100%</span>
+				<span style="font-size: 20px;">125%</span>
+				<span style="font-size: 24px;">150%</span>
+		</div>
+		<div class="sleep__img">
+			Изображения: 
+				<span>Включить</span>
+				<span>Отключить</span>
+		</div>
+	</div>
+</div>
+<!--Интерфейс версии для слабовидящих конец-->
 <!--Шапка начало-->
 <header class="header">
 	<div class="header__wrap">
@@ -74,10 +91,10 @@ _.template(require('./../includes/header.html'))(data) %>
 	<div class="carousel owl-carousel">
 		<div class="container">
 			<div class="slide">
-				<div class="slide__image no-image">
-					<img src="img/5-2.jpg" alt="Безболезненное лечение зубов" />
+				<div class="slide__image hide-image">
+					<img src="img/5-2.png" alt="Безболезненное лечение зубов" />
 				</div>
-				<div class="slide__content">
+				<div class="slide__content full-screen">
 					<h1 class="slide__title">Безболезненное лечение зубов с гарантией</h1>
 					<div class="slide__text">
 						Интервально-прогрессийная континуальная форма сонорна. Гипнотический
@@ -100,10 +117,10 @@ _.template(require('./../includes/header.html'))(data) %>
 		</div>
 		<div class="container">
 			<div class="slide">
-				<div class="slide__image no-image">
-					<img src="img/555-3.jpg" alt="Безболезненное лечение зубов" />
+				<div class="slide__image hide-image">
+					<img src="img/555-3.png" alt="Безболезненное лечение зубов" />
 				</div>
-				<div class="slide__content">
+				<div class="slide__content full-screen">
 					<h1 class="slide__title">Безболезненное лечение зубов с гарантией</h1>
 					<div class="slide__text">
 						Интервально-прогрессийная континуальная форма сонорна. Гипнотический

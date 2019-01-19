@@ -1,6 +1,7 @@
 .slide
 	display: flex
 	justify-content: space-between
+	align-items: center
 	&__image
 		flex-basis: 49%
 		img
@@ -16,14 +17,15 @@
 		+em(62)
 		color: #191919
 		font-weight: bold
-		line-height: 65px
+		line-height: 1.1
 		margin: 0
 		padding: 0
-		padding-top: 15%
+		padding-top: 40px
+		padding-bottom: 20px
 	&__text
 		+em(18)
 		color: #3b3b3b
-		line-height: 32px
+		line-height: 1.2
 	&__button
 		flex-basis: 50%
 		button
@@ -39,8 +41,8 @@
 			&:hover
 				background-color: darken($accent, 10%)
 	&__info
-		padding-bottom: 15%
-		padding-top: 5%
+		padding-bottom: 40px
+		padding-top: 20px
 		display: flex
 		justify-content: space-between
 		align-items: center
@@ -82,6 +84,13 @@
 			transition: all .25s
 		&:hover
 			background-color: darken(#fff, 10%)
+		&.disable
+			border-color: rgba(#3b3b3b, .2)
+			cursor: auto
+			background-color: #fff
+			i 
+				color: rgba(#191919, .2)
+
 
 @media screen and (max-width: 992px)
 	.slide

@@ -1,20 +1,17 @@
 import $ from "jquery"
 import Cookie from 'js-cookie'
 import carousel from './carousel'
+import sleep from './sleep'
 
 //Переменные сайта
 var setting = {
 	cookie: false,
 	header: null,
 	scroll: 0,
-	sleep: {
-		status: false,
-	}
 }
 
 //Инициализация сервера
 init()
-
 
 
 //Запуск скриптов

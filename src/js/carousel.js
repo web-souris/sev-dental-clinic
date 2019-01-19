@@ -24,10 +24,22 @@ const carousel = $('.carousel').owlCarousel({
 		</div>`
 		$('.slide__navigation').html(navigation)
 	},
-	onChange: function(event) {
+	onChanged: function(event) {
 		const item = event.property.value + 1
 		const val =  isNumber(item) ? item : 1
 		$('.slide__active-slide').text(val)
+		if(val == 1) {
+			$('.slide__nav_prev').addClass('disable')
+		}
+		else {
+			$('.slide__nav_prev').removeClass('disable')
+		}
+		if(val == $('.carousel .slide').length) {
+			$('.slide__nav_next').addClass('disable')
+		}
+		else {
+			$('.slide__nav_next').removeClass('disable')
+		}
 	}
 })
 $('.slide__nav_next').click(function() {
