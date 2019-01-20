@@ -1,0 +1,112 @@
+.section_uslugi
+	padding: 70px 0 120px
+.uslugi
+	&__head
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 50px
+		a
+			text-decoration: none
+			color: $blue
+			+em(24)
+			i 
+				padding-left: 5px
+	&__wrap
+		border-bottom: 1px solid rgba(#000, .15)
+		display: flex
+		justify-content: space-between
+		padding-bottom: 20px
+	&__item
+		font-weight: bold
+		+em(24)
+		color: #3b3b3b
+		cursor: pointer
+		position: relative
+		&.active
+			color: $blue
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				height: 3px
+				background-color: $blue
+				bottom: -22px
+	&__content
+		display: flex
+		justify-content: space-between
+		padding: 20px 0
+		.scroll-wrapper
+			max-height: 410px
+			overflow-x: hidden
+			padding: 0
+			position: relative
+		.scrollbar-inner > .scroll-element .scroll-bar
+			background-color: $accent
+			opacity: 1
+		.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar
+			opacity: 1
+		.scroll-wrapper > .scroll-content
+			padding-right: 20px
+	&__text
+		display: none
+		flex-basis: 45%
+		+em(18)
+		max-height: 400px
+		color: #3b3b3b
+		p
+			padding: 5px 0
+			margin: 0
+		ul
+			margin: 0
+			padding-top: 5px 
+			padding-bottom: 5px
+		&.active
+			display: block
+	&__image
+		flex-basis: 50%
+		img
+			width: 100%
+	&__button
+		text-align: center
+		margin-top: 20px
+		button 
+			background-color: $accent
+			border-radius: 35px
+			color: #fff
+			+em(24)
+			font-weight: bold
+			max-width: 290px
+			width: 100%
+			height: 70px
+			line-height: 70px
+
+@media screen and (max-width: 992px)
+	.uslugi
+		&__wrap
+			flex-wrap: wrap
+		&__item
+			flex-basis: 50%
+			text-align: center
+			&.active
+				&::after
+					display: none
+		&__image
+			flex-basis: 45%
+		&__text
+			flex-basis: 53%
+@media screen and (max-width: 768px)
+	.section_uslugi
+		padding-bottom: 70px
+	.uslugi
+		&__head
+			flex-wrap: wrap
+		.title
+			flex-basis: 100%
+		&__item
+			flex-basis: 100%
+		&__image
+			display: none
+		&__text
+			flex-basis: 100%

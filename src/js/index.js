@@ -1,5 +1,7 @@
 import $ from "jquery"
 import Cookie from 'js-cookie'
+import lazyLoad from 'jquery-lazyload'
+import scrollbar from 'jquery.scrollbar'
 import carousel from './carousel'
 import sleep from './sleep'
 
@@ -20,7 +22,11 @@ $(document).ready(() => {
 	$('.header__menu').click(() => {
 		$('.menu').slideToggle()
 	})
-	
+	$('img.lazy').lazyload({
+		effect: "fadeIn"
+	})
+	$('.scrollbar-inner').scrollbar({
+	})	
 })
 //Скролл
 $(document).scroll(() => {
@@ -92,3 +98,12 @@ function clickCookieAccept() {
 	})
 	$('.cookie').hide()
 }
+
+//Переключение услуг 
+$('.uslugi__item').click(function() {
+	$('.uslugi__item').removeClass('active')
+	$(this).addClass('active')
+	const index = $(this).index()
+	$('.uslugi__text').removeClass('active')
+	$('.uslugi__text').eq(index).addClass('active')	
+})

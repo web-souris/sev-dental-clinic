@@ -12,6 +12,8 @@
   "dependencies": {
     "bootstrap": "^4.1.3",
     "jquery": "^3.3.1",
+    "jquery-lazyload": "^1.9.7",
+    "jquery.scrollbar": "^0.2.11",
     "js-cookie": "^2.2.0",
     "normalize.css": "^8.0.1",
     "owl.carousel": "^2.3.4",
