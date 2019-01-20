@@ -28,6 +28,12 @@ $(document).ready(() => {
 	$('.scrollbar-inner').scrollbar({
 	})	
 })
+//Ресайз
+$(document).resize(function() {
+	$('.scrollbar-inner').scrollbar({
+	})
+})
+
 //Скролл
 $(document).scroll(() => {
 	scrollHeader()
