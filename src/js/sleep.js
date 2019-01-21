@@ -23,7 +23,7 @@ function getCookieSleep() {
 	return sleep
 }
 
-$('.button-sleep').click(function() {
+$(document).on('click', '.button-sleep',  function() {
 	setting.sleep = setting.sleep == 1 ? 0 : 1
 	changeSleep()
 	return Cookie.set('sleep', setting.sleep, {
