@@ -120,7 +120,7 @@ $('.get-certificate').each(function() {
 	const items = []
 	$(this).parent().parent().parent().children('.doctor__images').find('img').each(function() {
 		items.push({
-			src: '/' + $(this).attr('src'),
+			src: $(this).attr('src'),
 			title: $(this).attr('alt'),
 			type: 'image'
 		})
