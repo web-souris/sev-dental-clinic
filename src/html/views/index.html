@@ -427,10 +427,9 @@ _.template(require('./../includes/header.html'))(data) %>
 					<div class="about__desc">Довольных клиентов за 2018 год</div>
 				</div>
 				<div class="about__item">
-					<h3>4</h3>
+					<h3>%</h3>
 					<div class="about__desc">
-						Высококвалифицированных
-						специалиста
+						Скидки клиентам
 					</div>
 				</div>
 			</div>
@@ -439,10 +438,103 @@ _.template(require('./../includes/header.html'))(data) %>
 </section>
 <!--О нас конец-->
 <!--Преимущества начало-->
-<section style="min-height: 100vh" class="section" id="preim"></section>
+<div class="section" id="preim">
+	<div class="container">
+		<div class="preim">
+			<div class="preim__right hide-image">
+				<img src="img/Кресло.jpg" alt="Наши Преимущества">
+			</div>
+			<div class="preim__left full-screen">
+				<div class="preim__item">
+					<div class="preim__img">
+						<img src="img/protection.png" alt="Уровень качества">
+					</div>
+					<div class="preim__text">
+						Высокий уровень и 
+						контроль качества 
+						лечения. 
+					</div>
+				</div>
+				<div class="preim__item">
+					<div class="preim__img">
+						<img src="img/tooth-1.png" alt="Гарантия качества">
+					</div>
+					<div class="preim__text">
+						Гарантия качества на все 
+						оказанные медицинские 
+						услуги.
+					</div>
+				</div>
+				<div class="preim__item">
+					<div class="preim__img">
+						<img src="img/dentist.png" alt="Высококвалифицированный персонал">
+					</div>
+					<div class="preim__text">
+						Высококвалифицированный   
+						персонал.
+					</div>
+				</div>
+				<div class="preim__item">
+					<div class="preim__img">
+						<img src="img/hospital.png" alt="Удобное местоположение.">
+					</div>
+					<div class="preim__text">Удобное местоположение.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <!--Преимущества конец-->
 <!--Врачи начало-->
-<section style="min-height: 100vh" class="section" id="doctor"></section>
+<section class="section section_doctor" style="background-color: #fbfbfb;" id="doctor">
+	<div class="container">
+		<div class="doctor__image">
+			<img src="img/Фото.jpg" alt="Олег Анатольевич Лымарь">
+		</div>
+		<div class="doctor">
+			<h2 class="title">Наши врачи</h2>
+			<div class="doctor__wrapper">
+				<div class="doctor__desc">
+					Моя задача, как главного врача и практикующего стоматолога — это 
+					создание комфортного и безболезненного лечение для наших пациентов. 
+					Я получаю колоссальное удовольствие от возможности помочь людям.
+				</div>
+				<h3 class="doctor__name">Олег Анатольевич Лымарь</h3>
+				<div class="doctor__job">Директор, главный врач, врач стоматолог общей практики, врач стоматолог-ортопед</div>
+				<div class="doctor__text">
+					<p>
+						<b>1993-1998 гг.</b> - Крымский Государственный Медицинский Университет им. Георгиевского
+					</p>
+					<p>
+						<b>1998-2000 гг.</b> - интернатура, Республиканская стоматологическая поликлиника, г.Симферополь.
+					</p>
+					<p>
+						<b>2000-2004 гг.</b> - врач стоматолог в стоматологическом отделении Первомайской ЦРБ АРК
+					</p>
+					<p>
+						<b>2004-2013 гг.</b> - врач стоматолог общей практики, врач стоматолог-ортопед, главный врач в стоматологии «Дентал Депо Севастополь», г. Севастополь.
+					</p>
+					<p>
+						<b>С 2013 г.</b> - директор, главный врач, врач стоматолог общей практики, врач стоматолог-ортопед в Стоматологии «Dental Clinic».
+					</p> 
+				</div>
+				<div class="doctor__buttons">
+					<div class="doctor__button">
+						<button class="button modal-open">Записаться</button>
+					</div>
+					<div class="doctor__button doctor__certificate">
+						<button class="button get-certificate">Смотреть сертификаты</button>
+					</div>
+				</div>
+				<div class="doctor__images">
+					<img src="img/CCI09012019_0007.jpg" alt="Сертификат №1">
+					<img src="img/CCI09012019_0005.jpg" alt="Сертификат №2">
+					<img src="img/CCI09012019_0006.jpg" alt="Сертификат №3">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <!--Врачи конец-->
 <!--Документация начало-->
 <section style="min-height: 100vh" class="section" id="document"></section>

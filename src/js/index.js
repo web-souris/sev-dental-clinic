@@ -1,6 +1,7 @@
 import $ from "jquery"
 import Cookie from 'js-cookie'
 import lazyLoad from 'jquery-lazyload'
+import magnificPopup from 'magnific-popup'
 import scrollbar from 'jquery.scrollbar'
 import carousel from './carousel'
 import sleep from './sleep'
@@ -112,4 +113,23 @@ $('.uslugi__item').click(function() {
 	const index = $(this).index()
 	$('.uslugi__text').removeClass('active')
 	$('.uslugi__text').eq(index).addClass('active')	
+})
+
+//Открытие сертификатов
+$('.get-certificate').each(function() {
+	const items = []
+	$(this).parent().parent().parent().children('.doctor__images').find('img').each(function() {
+		items.push({
+			src: '/' + $(this).attr('src'),
+			title: $(this).attr('alt'),
+			type: 'image'
+		})
+	})
+	console.log(items)
+	$(this).magnificPopup({
+		items: items,
+		gallery: {
+      enabled: true
+    },
+	})
 })
