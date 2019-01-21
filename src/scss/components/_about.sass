@@ -1,0 +1,71 @@
+.about
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-wrap: wrap
+	&__image
+		flex-basis: 50%
+		img
+			vertical-align: top
+			margin-top: -70px
+			width: 100%
+	&__content
+		flex-basis: 35%
+		padding-left: 3%
+		padding-right: 10px
+		max-width: 1190px
+		margin: 0 auto
+		margin-left: 0
+	&__text
+		max-height: 500px
+		+em(18)
+		h3
+			+em(19)
+		.scroll-wrapper
+			max-height: 510px
+		.scrollbar-inner > .scroll-element .scroll-bar
+			background-color: $accent
+			opacity: 1
+		.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar
+			opacity: 1
+		.scroll-wrapper > .scroll-content
+			padding-right: 20px
+	&__preim
+		padding: 50px 0 30px
+		flex-basis: 100%
+	&__item
+		padding-bottom: 20px
+		h3
+			font-weight: 200
+			color: $accent
+			+em(90)
+			line-height: 1
+			margin: 0
+			padding: 0
+	&__desc
+		+em(24)
+		color: #191919
+		font-weight: bold
+		max-width: 320px
+
+.sleep
+	.about
+		&__content
+			margin-left: auto
+			padding-left: 10px
+
+
+@media screen and (max-width: 1400px)
+	.about
+		&__content
+			flex-basis: 50%
+@media screen and (max-width: 992px)
+	.about
+		&__image
+			display: none
+		&__content
+			flex-basis: 100%
+		&__text
+			max-height: 100%
+			.scroll-wrapper
+				max-height: 100%
