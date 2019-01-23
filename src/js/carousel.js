@@ -6,8 +6,6 @@ const carousel = $('.carousel').owlCarousel({
 	items: 1,
 	dots: false,
 	autoplay: false,
-	autoplayHoverPause: true,
-	autoplayTimeout: 5000,
 	onInitialize: function() {
 		const items = $('.carousel .slide').length
 		const navigation = `<div class="slide__dost">

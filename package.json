@@ -13,6 +13,8 @@
     "bootstrap": "^4.1.3",
     "jquery": "^3.3.1",
     "jquery-lazyload": "^1.9.7",
+    "jquery.maskedinput": "^1.4.1",
+    "jquery.phone": "^1.0.4",
     "jquery.scrollbar": "^0.2.11",
     "js-cookie": "^2.2.0",
     "magnific-popup": "^1.1.0",

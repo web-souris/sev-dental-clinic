@@ -1,0 +1,100 @@
+.modal
+	position: fixed
+	z-index: 20
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	display: none
+	background-color: rgba(#000, .8)
+	&_fullscreen
+		.modal__wrapper
+			align-items: flex-start
+	&__wrapper
+		width: 100%
+		height: 100vh
+		display: flex
+		justify-content: center
+		overflow: auto
+		align-items: center
+	&__wrap
+		box-shadow: 0px 7px 25px 0 rgba(0, 44, 133, 0.35)
+		border-radius: 4px
+		display: flex
+		justify-content: space-between
+		background-color: #fff
+		max-width: 1015px
+		width: 100%
+		overflow: hidden
+	&__image
+		flex-basis: 100%
+		max-width: 356px
+		overflow: hidden
+		img
+			height: 100%
+			vertical-align: top
+	&__content
+		flex-basis: 75%
+		padding: 30px 0
+		padding-left: 5%
+		padding-right: 8%
+	&__text
+		+em(20)
+		color: #3b3b3b
+	&__item
+		padding-top: 20px
+	&__label
+		+em(12)
+		color: #a2a2a2
+		cursor: pointer
+	&__input
+		padding-top: 7px
+		input
+			border: none
+			border-bottom: 1px solid rgba(#1697fd, .35)
+			width: 100%
+			+em(18)
+			padding-bottom: 2px
+			transition: all .25s
+			&:focus
+				border-color: #1697fd
+	&__button
+		display: flex
+		justify-content: space-between
+		align-items: center
+		button
+			background-color: $accent
+			color: #fff
+			border-radius: 35px
+			padding: 20px 40px
+			+em(24)
+			font-weight: bold
+			max-width: 260px
+			width: 100%
+			flex-basis: 100%
+	&__desc
+		flex-basis: 100%
+		padding-left: 3%
+		+em(13)
+		color: #3b3b3b
+		a
+			color: $blue
+
+@media screen and (max-width: 992px)
+	.modal
+		&__image
+			display: none
+		&__wrap
+			max-width: 90%
+		&__content
+			flex-basis: 100%
+@media screen and (max-width: 768px)
+	.modal
+		&__content
+			padding: 10px
+			width: 100%
+		&__button
+			display: block
+			text-align: center
+			button
+				margin: 0 auto
