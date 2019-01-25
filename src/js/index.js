@@ -137,7 +137,6 @@ $(".get-certificate").each(function() {
 				type: "image"
 			});
 		});
-	console.log(items);
 	$(this).magnificPopup({
 		items: items,
 		gallery: {
@@ -185,7 +184,6 @@ $('.modal-open').click(function() {
 })
 
 function modalOnWindow() {
-	console.log($('.modal__wrap').height() + ' '+ $(window).height())
 	if($(window).height() < $('.modal__wrap').height()) {
 		$('.modal').addClass('modal_fullscreen')
 	}
@@ -193,3 +191,12 @@ function modalOnWindow() {
 		$('.modal').removeClass('modal_fullscreen')
 	}
 }
+
+$('.document__item').each(function(index) {
+	var number = index + 1
+	if(number < 10) {
+		number = '0' + number
+	}
+	var item = `<span>${number} /</span>`
+	$(this).append(item)
+})
