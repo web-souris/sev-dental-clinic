@@ -200,3 +200,4 @@ $('.document__item').each(function(index) {
 	var item = `<span>${number} /</span>`
 	$(this).append(item)
 })
+

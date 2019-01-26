@@ -46,4 +46,35 @@ $('.slide__nav_next').click(function() {
 $('.slide__nav_prev').click(function() {
 	carousel.trigger('prev.owl.carousel')
 })
-export default carousel
+
+const review = $('.review__slider').owlCarousel({
+	items: 1,
+	dots: false,
+	onInitialize: function() {
+		const items = $('.review__slider .item').each(function() {
+			const image = $(this).attr('data-image')
+			const name = $(this).attr('data-name')
+			const item = `<div class="review__item"><img src="${image}" alt="${name}"/></div>`
+			$('.review__images').append(item)
+		})
+		getReviewActiveImage(0)
+	},
+	onChanged: function(event) {
+		if(isNumber(event.property.value)) {
+			getReviewActiveImage(event.property.value)
+		}
+	}
+})
+$(document).on('click', '.review__item', function() {
+	review.trigger('to.owl.carousel', $(this).index())
+})
+export default {carousel, review}
+
+
+
+function getReviewActiveImage(index) {
+	const item = $('.review__slider .item').eq(index)
+	$('.review__item').removeClass('active')
+	$('.review__item').eq(index).addClass('active')
+	$('.review__image').html(`<img src="${item.attr('data-image')}" alt="${item.attr('data-name')}" /><span>${item.attr('data-name')}</span>`)
+}
