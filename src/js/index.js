@@ -6,6 +6,7 @@ import scrollbar from "jquery.scrollbar";
 import carousel from "./carousel";
 import sleep from "./sleep";
 import mask from "jquery.maskedinput/src/jquery.maskedinput";
+import map from './map'
 
 //Переменные сайта
 var setting = {

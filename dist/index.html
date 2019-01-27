@@ -547,7 +547,7 @@
     </section>
     <!--Документация конец-->
     <!--Отзывы начало-->
-    <section style="background-image: url(img/61.jpg)" class="section section_bg section_grey hide-image" id="review">
+    <section style="background-image: url(img/61.jpg)" class="section section_bg section_grey" id="review">
       <div class="container">
         <h2 class="title" style="text-align: center;">Наши пациенты говорят</h2>
         <div class="review">
@@ -567,15 +567,124 @@
             </div>
           </div>
           <div class="review__line"></div>
-          <div class="review__image"></div>
-          <div class="review__images"></div>
+          <div class="review__image hide-image"></div>
+          <div class="review__images hide-image"></div>
         </div>
       </div>
     </section>
     <!--Отзывы конец-->
+    <!--Интсаграм начало-->
+    <section class="section" style="background-color: #f7f4f1;">
+      <div class="container" style="padding: 40px 0">
+        <h2 class="title">Мы в <span class="blue" style="color: #1697fd;">Instagram</span></h2>
+        <div class="instagram">
+          <div class="instagram__left">
+            <div class="instagram__image">
+              <img src="uploads/inst/1.jpg" alt="Наш Instagram" />
+              <a href="https://www.instagram.com/dental_clinic_sevastopol/" target="_blank">
+                <span> Перейти в <i class="fa fa-instagram"></i> </span>
+              </a>
+            </div>
+            <div class="instagram__image">
+              <img src="uploads/inst/2.jpg" alt="Наш Instagram" />
+              <a href="https://www.instagram.com/dental_clinic_sevastopol/" target="_blank">
+                <span> Перейти в <i class="fa fa-instagram"></i> </span>
+              </a>
+            </div>
+            <div class="instagram__image">
+              <img src="uploads/inst/3.jpg" alt="Наш Instagram" />
+              <a href="https://www.instagram.com/dental_clinic_sevastopol/" target="_blank">
+                <span> Перейти в <i class="fa fa-instagram"></i> </span>
+              </a>
+            </div>
+            <div class="instagram__image">
+              <img src="uploads/inst/4.jpg" alt="Наш Instagram" />
+              <a href="https://www.instagram.com/dental_clinic_sevastopol/" target="_blank">
+                <span> Перейти в <i class="fa fa-instagram"></i> </span>
+              </a>
+            </div>
+            <div class="instagram__image">
+              <img src="uploads/inst/5.jpg" alt="Наш Instagram" />
+              <a href="https://www.instagram.com/dental_clinic_sevastopol/" target="_blank">
+                <span> Перейти в <i class="fa fa-instagram"></i> </span>
+              </a>
+            </div>
+            <div class="instagram__image">
+              <img src="uploads/inst/6.jpg" alt="Наш Instagram" />
+              <a href="https://www.instagram.com/dental_clinic_sevastopol/" target="_blank">
+                <span> Перейти в <i class="fa fa-instagram"></i> </span>
+              </a>
+            </div>
+          </div>
+          <div class="instagram__right"><img src="img/left-thumb.png" alt="Наш инстраграм" /></div>
+        </div>
+      </div>
+    </section>
+    <!--Инстаграм конец-->
     <!--Контакты начало-->
-    <section style="min-height: 100vh" class="section" id="contacts"></section>
+    <section class="section section_contacts" style="padding: 0;" id="contacts">
+      <h2 class="title">Контакты</h2>
+      <div class="wrapper">
+        <div class="map full-screen" id="map"></div>
+        <div class="contacts">
+          <div class="contacts__image hide-image"><img src="img/18.jpg" alt="Контакты" /></div>
+          <div class="contacts__text">
+            <div class="contacts__item">
+              <a href="tel:+79787444575" style="text-decoration: underline;">+7 (978) 744-45-75</a>
+            </div>
+            <div class="contacts__item"><a href="mailto:info@sev-dental-clinic.ru">info@sev-dental-clinic.ru</a></div>
+            <div class="contacts__item">
+              <h3>Адрес</h3>
+              <p>Россия, г. Севастополь, Пр.Победы 2А</p>
+            </div>
+            <div class="contacts__item">
+              <h3>Время работы:</h3>
+              <p>
+                пн.-пт. - с 9:00 до 18:00<br />
+                сб. - с 09:00 до 14:00<br />
+                вс. - выходной
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--Контакты конец-->
+    <!--Footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="wrapper wrapper_space-between">
+          <div class="footer__left">
+            <div class="footer__logo">
+              <a href="/">
+                <img src="img/logo.png" alt="Sev-dental-clinic" class="logo__logo" />
+                <img src="img/logo-text.png" alt="Стоматологическая клиника" />
+              </a>
+            </div>
+            <div class="footer__copy">
+              <p>
+                © 2014 — 2019,<br />
+                ООО «Стоматология «Dental Clinic».<br />
+                Все права защищены
+              </p>
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__social">
+              <a href="https://vk.com/club66110341" target="_blank"> <i class="fa fa-vk"></i> </a>
+              <a href="https://www.instagram.com/dental_clinic_sevastopol/" target="_blank">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </div>
+            <div class="footer__make">
+              <span>Разработано в</span><br />
+              <a href="https://web-souris.ru" target="_blank"> <img src="img/logo-make.png" alt="Souris" /> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Footer end-->
     <!--Cookie начало-->
     <div class="cookie">
       <div class="cookie__text">
@@ -623,6 +732,10 @@
       </div>
     </div>
     <!--Модальное окно конец-->
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=a177d1bc-e94e-4102-b52f-bd74b0f483f1&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <script src="js/bundle.js"></script>
   </body>
 </html>
